@@ -1,10 +1,14 @@
 # wxml-to-canvas
 
-[![](https://img.shields.io/npm/v/wxml-to-canvas)](https://www.npmjs.com/package/wxml-to-canvas)
 [![](https://img.shields.io/npm/l/wxml-to-canvas)](https://github.com/wechat-miniprogram/wxml-to-canvas)
 
 小程序内通过静态模板和样式绘制 canvas ，导出图片，可用于生成分享图等场景。[代码片段](https://developers.weixin.qq.com/s/r6UBlEm17pc6)
 
+## 说明
+
+从 [wxml-to-canvas](https://github.com/wechat-miniprogram/wxml-to-canvas) fork 而来，做了少量修改：
+
+1. 给 renderToCanvas 函数增加 shouldClearRect 配置，允许在绘制前不清空 canvas，详情参考 [pull request](https://github.com/wechat-miniprogram/wxml-to-canvas/pull/18);
 
 ## 使用方法
 
@@ -19,7 +23,7 @@ npm install --save wxml-to-canvas
 ```
 {
   "usingComponents": {
-    "wxml-to-canvas": "wxml-to-canvas",
+    "wxml-to-canvas": "@tencent/oversea-wxml-to-canvas"
   }
 }
 ```
