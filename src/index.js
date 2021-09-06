@@ -15,7 +15,11 @@ Component({
     height: {
       type: Number,
       value: 300
-    }
+    },
+    use2dCanvas: {
+      type: Boolean,
+      value: true
+    },
   },
   data: {
     use2dCanvas: false, // 2.9.2 后可用canvas 2d 接口
@@ -23,7 +27,7 @@ Component({
   lifetimes: {
     attached() {
       const {SDKVersion, pixelRatio: dpr} = wx.getSystemInfoSync()
-      const use2dCanvas = compareVersion(SDKVersion, '2.9.2') >= 0
+      const use2dCanvas = compareVersion(SDKVersion, '2.9.2') >= 0 && this.data.use2dCanvas
       this.dpr = dpr
       this.setData({use2dCanvas}, () => {
         if (use2dCanvas) {

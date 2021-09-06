@@ -9,6 +9,7 @@
 从 [wxml-to-canvas](https://github.com/wechat-miniprogram/wxml-to-canvas) fork 而来，做了少量修改：
 
 1. 给 renderToCanvas 函数增加 shouldClearRect 配置，允许在绘制前不清空 canvas，详情参考 [pull request](https://github.com/wechat-miniprogram/wxml-to-canvas/pull/18);
+2. 给组件 wxml 添加 use2dCanvas 配置，绕过新的 canvas2D 宽高 4096 的限制，用于生成长图，背景参考 [canvas 2d 的画布有 4096 大小限制, 旧版 canvas 没有?](https://developers.weixin.qq.com/community/develop/doc/0006a442b74ec0664b9ab1ea054c00)。
 
 ## 使用方法
 
